@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-<?php ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +15,12 @@
         <?php include "header.php"; ?>
     </header>
     <section>
-        <?php include "loginbox.php"; ?>
+        <?php
+        if(isset($_SESSION['userid']))
+          include "status.php";
+        else
+        include "loginbox.php";
+        ?>
     </section>
     <footer>
         <?php include "footer.php"; ?>

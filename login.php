@@ -1,3 +1,4 @@
+<!-- 로그인 -->
 <?php
     session_start();
     $conn =mysqli_connect("localhost","root","root","member") or die("fail");

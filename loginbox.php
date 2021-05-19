@@ -5,9 +5,6 @@
 </head>
 
 <body>
-    <div id="main_img">
-        <img src="img/15125.png" width=1200px height="300" alt="">
-    </div>
     <div id="main_con">
         <div id="login_box">
             <div id="login_title">
