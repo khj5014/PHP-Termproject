@@ -1,7 +1,11 @@
 <?php 
     session_start();
     if(isset($_SESSION['userid'])) {
-        echo $_SESSION['userid'];
+?>
+        <form action="logout.php" method="POST">
+            <input type="submit" value="로그아웃">
+        </form>
+  <?php   
     }
 ?>
 <div id="top">

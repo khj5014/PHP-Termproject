@@ -69,32 +69,61 @@ div {
         height: 50px;
         margin-top: 20px;
     }
-    /* 뿌터 */
-    footer {
-        background-color: #2c2a29;
-        height: 100px;
+    /* 스테이터스 */
+    #status_content {
+        height: 300px;
+        background-color: #ccc;
+        display: block;
+        float: left;
         width: 100%;
+    }
+    #status_menu {
+        height: 100%;
+        width: 400px;
+        background-color: aqua;
         float: left;
     }
-    #footer_content {
-        position: relative;
-        width: 1000px;
-        margin: 0 auto;
+    #status_target {
+        float: right;
+        height: 100%;
+        background-color: aquamarine;
     }
-    #footer_logo {
-        position: absolute;
-        top: 30px;
-        left: 50px;
-        font-size: 16px;
-    }
-    #footer_ul1 {
-        position: absolute;
-        top: 20px;
-        left: 400px;
-    }
-    #footer_ul2 {
-        position: absolute;
-        top: 20px;
-        left: 700px;
-    }
+}
+
+
+/* 뿌터 */
+
+footer {
+    background-color: #2c2a29;
+    height: 100px;
+    width: 100%;
+    float: left;
+}
+
+#footer_content {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#footer_logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 16px;
+}
+
+#footer_ul1 {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+
+#footer_ul2 {
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
+
+
 }
