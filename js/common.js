@@ -11,3 +11,25 @@ function check_input() {
     }
     document.loginform.submit();
 }
+$(function() {
+    $('#user').click(function() { // #user 가져오기
+        $.ajax({
+            url: "user.php",
+            type: "post",
+            datatype: "html",
+            success: function(data) {
+                $('#status_target').html(data);
+            }
+        });
+    });
+    $('#gear').click(function() { // #gear 가져오기
+        $.ajax({
+            url: "gear.php",
+            type: "post",
+            datatype: "html",
+            success: function(data) {
+                $('#status_target').html(data);
+            }
+        });
+    });
+});

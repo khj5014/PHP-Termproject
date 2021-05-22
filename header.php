@@ -17,9 +17,9 @@
     </div>
     <div id="menu_bar">
         <ul>
-            <li><a href="">menu1</a></li>
-            <li><a href="">menu2</a></li>
-            <li><a href="">menu3</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
         </ul>
     </div>
     <div id="main_img">
