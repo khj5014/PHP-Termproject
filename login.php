@@ -6,7 +6,8 @@
     //id ,pw
     $id =$_POST['id'];
     $pw= $_POST['pw'];
-
+    $_SESSION['status']=1;
+    
     // check
     $query = "select * from member where id='$id'";
     $result = $conn->query($query);

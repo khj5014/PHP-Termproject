@@ -40,7 +40,7 @@ div {
     #menu_bar a:hover {
         /* background-color: #2c2a29; */
         /* color: black; */
-        background-color: #ccc;
+        /* background-color: #ccc; */
     }
     /* 메인 섹션 */
     form {
@@ -71,59 +71,66 @@ div {
     }
     /* 스테이터스 */
     #status_content {
-        height: 300px;
+        height: 600px;
         background-color: #ccc;
-        display: block;
-        float: left;
         width: 100%;
     }
     #status_menu {
+        display: block;
         height: 100%;
-        width: 400px;
-        background-color: aqua;
+        width: 20%;
+        background-color: #434343;
         float: left;
+        font-size: 40px;
+    }
+    #status_menu ul {
+        margin: 20% 0;
+        vertical-align: center;
+    }
+    #status_menu ul li {
+        font-size: 100px;
+        text-align: center;
+    }
+    #status_menu ul li:hover {
+        background-color: #545454;
     }
     #status_target {
-        float: right;
+        display: block;
+        float: left;
+        width: 80%;
         height: 100%;
-        background-color: aquamarine;
+        background-color: #e0e0e0;
     }
-}
-
-
-/* 뿌터 */
-
-footer {
-    background-color: #2c2a29;
-    height: 100px;
-    width: 100%;
-    float: left;
-}
-
-#footer_content {
-    position: relative;
-    width: 1000px;
-    margin: 0 auto;
-}
-
-#footer_logo {
-    position: absolute;
-    top: 30px;
-    left: 50px;
-    font-size: 16px;
-}
-
-#footer_ul1 {
-    position: absolute;
-    top: 20px;
-    left: 400px;
-}
-
-#footer_ul2 {
-    position: absolute;
-    top: 20px;
-    left: 700px;
-}
-
-
+    footer {
+        background-color: #2c2a29;
+        height: 100px;
+        width: 100%;
+        float: left;
+        margin-top: 20px;
+    }
+    #footer_content {
+        position: relative;
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .fa-cog:before {
+        content: "\f013";
+    }
+    /* 뿌터 */
+    #footer_logo {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        font-size: 16px;
+    }
+    #footer_ul1 {
+        position: absolute;
+        top: 20px;
+        left: 400px;
+    }
+    #footer_ul2 {
+        position: absolute;
+        top: 20px;
+        left: 700px;
+    }
 }
