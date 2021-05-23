@@ -37,11 +37,11 @@ div {
         padding: 10px 30px;
         height: 28px;
     }
-    #menu_bar a:hover {
+    /* #menu_bar a:hover {
         /* background-color: #2c2a29; */
-        /* color: black; */
-        /* background-color: #ccc; */
-    }
+    /* color: black; */
+    /* background-color: #ccc; */
+    /*}*/
     /* 메인 섹션 */
     form {
         margin-bottom: 10%;
@@ -81,11 +81,15 @@ div {
         width: 20%;
         background-color: #434343;
         float: left;
-        font-size: 40px;
+    }
+    #status_login {
+        height: 23%;
+        background-color: aliceblue;
+        padding: 5%;
     }
     #status_menu ul {
-        margin: 20% 0;
-        vertical-align: center;
+        font-size: 40px;
+        margin-top: 20%;
     }
     #status_menu ul li {
         font-size: 100px;
