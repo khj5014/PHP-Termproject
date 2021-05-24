@@ -1,5 +1,4 @@
 <div id="status_content">
-
     <div id="status_menu">
         <div id="status_login">
             <b><?php echo $_SESSION['userid'] ?></b> 님 환영합니다.
@@ -10,11 +9,12 @@
             </div>
         </div>
         <ul>
+            <li id="home"><span style="color:gray"><i class="fas fa-home"></i></span></li>
             <li id="gear"><span style="color:gray"><i class="fas fa-cog"></i></span></li>
             <li id="user"><span style="color:gray"><i class="fas fa-users"></i></span></li>
-            <li id="wrench"><span style="color:gray"><i class="fas fa-wrench"></i></span></li>
         </ul>
     </div>
     <div id="status_target">
-    </div>
+        <?php include "home.php";?>
+ </div>
 </div>

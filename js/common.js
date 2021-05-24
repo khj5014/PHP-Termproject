@@ -22,7 +22,17 @@ $(function() {
             }
         });
     });
-    $('#gear').click(function() { // #gear 가져오기
+    $('#home').click(function() { // #gear 가져오기
+        $.ajax({
+            url: "home.php",
+            type: "post",
+            datatype: "html",
+            success: function(data) {
+                $('#status_target').html(data);
+            }
+        });
+    });
+    $('#gear').click(function() { // home.php
         $.ajax({
             url: "gear.php",
             type: "post",
