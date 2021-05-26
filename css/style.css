@@ -105,6 +105,7 @@ div {
         height: 100%;
         background-color: #e0e0e0;
     }
+    /* 뿌터 */
     footer {
         background-color: #2c2a29;
         height: 100px;
@@ -120,7 +121,6 @@ div {
     .fa-cog:before {
         content: "\f013";
     }
-    /* 뿌터 */
     #footer_logo {
         position: absolute;
         top: 30px;
