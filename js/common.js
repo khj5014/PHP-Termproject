@@ -1,4 +1,4 @@
-function check_input() {
+function check_input() { // login_form.php 
     if (!document.loginform.id.value) {
         alert("아이디를 입력하세요");
         document.loginform.id.focus();
@@ -10,6 +10,25 @@ function check_input() {
         return;
     }
     document.loginform.submit();
+}
+
+function check_userset() { //set_user.php
+    if (!document.create_user.id.value) {
+
+    }
+    if (!document.create_user.pw.value) {
+
+    }
+    if (!document.crete_user.pw2.value) {
+
+    }
+    if (!document.create_user.email_front.value) {
+
+    }
+    if (!document.create_user.email_end.value) {
+
+    }
+    document.create_user.submit();
 }
 
 function set_user() {
