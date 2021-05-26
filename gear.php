@@ -1,4 +1,3 @@
-
 <style>
 table {
     width: 100%;
@@ -15,10 +14,9 @@ table {
 </style>
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "root", "member") or die("fail");
-
+include_once "db.php";
 $query = "select * from ride";
-$result = $conn->query($query);
+$result = mq($query);
 $max_result = 10;
 ?>
 

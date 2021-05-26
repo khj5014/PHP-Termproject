@@ -11,6 +11,17 @@ function check_input() {
     }
     document.loginform.submit();
 }
+
+function set_user() {
+    $.ajax({
+        url: "set_user.php",
+        type: "post",
+        success: function(data) {
+            $('#status_target').html(data);
+        }
+    })
+}
+
 $(function() {
     $('#user').click(function() { // #user 가져오기
         $.ajax({
