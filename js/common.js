@@ -12,23 +12,32 @@ function check_input() { // login_form.php
     document.loginform.submit();
 }
 
+
 function check_userset() { //set_user.php
-    if (!document.create_user.id.value) {
-
+    var checkid = document.getElementsByName('checkid').value;
+    if (checkid == 0 || checkid == null) {
+        alert("ID 중복체크해주세요");
+        return false;
     }
-    if (!document.create_user.pw.value) {
+    // if (!document.create_user.id.value) {
 
-    }
-    if (!document.crete_user.pw2.value) {
+    // }
+    // if (!document.create_user.pw1.value) {
 
-    }
-    if (!document.create_user.email_front.value) {
+    // }
+    // if (!document.crete_user.pw2.value) {
 
-    }
-    if (!document.create_user.email_end.value) {
+    // }
+    // if (!document.create_user.email_front.value) {
 
+    // }
+    // if (!document.create_user.email_end.value) {
+
+    // }
+    if (document.create_user.pw1.value != document.create_user.pw2.value) {
+        alert('비밀번호가 일치하지않습니다.');
+        return false;
     }
-    document.create_user.submit();
 }
 
 function set_user() {
@@ -38,7 +47,7 @@ function set_user() {
         success: function(data) {
             $('#status_target').html(data);
         }
-    })
+    });
 }
 
 $(function() {
@@ -71,5 +80,22 @@ $(function() {
                 $('#status_target').html(data);
             }
         });
+    });
+    $('#id').on("keyup", function() {
+        var self = $(this);
+        userid = self.val();
+
+
+        $.ajax({
+            url: "id_check.php",
+            type: "post",
+            datatype: "html",
+            data: { 'userid': userid },
+            success: function(data) {
+                self.parent().find("div").html(data);
+
+            }
+
+        })
     });
 });
