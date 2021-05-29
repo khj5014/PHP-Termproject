@@ -1,9 +1,4 @@
-<?php
-    if(!isset($_SESSION['duplicate_check']))
-    {
-        $_SESSION['duplicate_check']=0;
-    }
-?>
+
 <script type="text/javascript" src="./js/common.js"></script>
 <div>
     <form  name ="create_user" action="create_user.php" method="POST" onsubmit="return check_userset();">
