@@ -81,11 +81,19 @@ $(function() {
             }
         });
     });
+    $('#write_content').on("click", function() {
+        $.ajax({
+            url: "write_content.php",
+            type: "post",
+            datatype: "html",
+            success: function(data) {
+                $('#status_target').html(data);
+            }
+        });
+    });
     $('#id').on("keyup", function() {
         var self = $(this);
         userid = self.val();
-
-
         $.ajax({
             url: "id_check.php",
             type: "post",

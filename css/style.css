@@ -52,7 +52,6 @@ div {
         width: 100%;
         height: auto;
     }
-    #main_content {}
     #login_box {
         width: 450px;
         margin: 0 auto;
@@ -100,6 +99,7 @@ div {
     }
     #status_target {
         display: block;
+        overflow: hidden;
         float: left;
         width: 80%;
         height: 100%;
@@ -136,5 +136,9 @@ div {
         position: absolute;
         top: 20px;
         left: 700px;
+    }
+    .paging li {
+        display: inline-block;
+        padding: 5px;
     }
 }

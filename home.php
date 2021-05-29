@@ -38,16 +38,9 @@ $sql_home_sub1 = mq("select * from notice order by id desc limit $page_start,$li
     #home_sub1 {
         background-color: #222;
         float: left;
-        width: 50%;
+        width: 100%;
         height: 75%;
         color: white;
-    }
-
-    #home_sub2 {
-        background-color: #333;
-        float: right;
-        width: 50%;
-        height: 75%;
     }
 </style>
 <div id="home_main">
@@ -90,7 +83,7 @@ $sql_home_sub1 = mq("select * from notice order by id desc limit $page_start,$li
     ?>
     </table>
     <nav>
-        <ul>
+        <ul class="paging">
             <?php
             if ($page <= 1) {
                 // 빈 값
@@ -148,8 +141,7 @@ $sql_home_sub1 = mq("select * from notice order by id desc limit $page_start,$li
             ?>
         </ul>
     </nav>
-</div>
-<div id="home_sub2">
-    <!-- 기타 -->
-    home_sub2
+    <div>
+            <button id="write_content">글작성</button>
+    </div>
 </div>

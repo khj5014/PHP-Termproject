@@ -7,9 +7,15 @@ table {
   th, td {
     border: 1px solid #444444;
   }
-  #main1{
-      margin: 0 auto;
-      padding: 20px;
+  #gear_main{
+    height: 30%;
+    padding: 5%;
+      background-color: #555;
+  }
+  #gear_sub1{
+    height: 60%;
+    background-color: #444;
+    overflow: hidden;      
   }
 </style>
 <?php
@@ -20,7 +26,7 @@ $result = mq($query);
 $max_result = 10;
 ?>
 
-<div id="main1">
+<div id="gear_main">
     <table>
         <tr>
             <thead>
@@ -41,4 +47,7 @@ $max_result = 10;
         ?>
         </tr>
     </table>
+</div>
+<div id="gear_sub1">
+asdf
 </div>

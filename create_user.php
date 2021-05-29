@@ -7,9 +7,14 @@
     mq($sql);
     $sql = "select * from member where id ='$id'";
     if(mq($sql)){
-        echo "성공";
+        echo "계정 생성 성공";
+        ?>
+        <script>
+            location.replace('index.php');
+        </script>
+        <?php
     }
     else{
-        echo "실패";
+        echo "계정 생성실패";
     }
     ?>

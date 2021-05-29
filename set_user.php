@@ -6,9 +6,8 @@
 ?>
 <script type="text/javascript" src="./js/common.js"></script>
 <div>
-    <form target ="_blank" name ="create_user" action="create_user.php" method="POST" onsubmit="return check_userset();">
+    <form  name ="create_user" action="create_user.php" method="POST" onsubmit="return check_userset();">
         <ul>
-            <input type="hidden" name="checkid" value=0>
             <div>
                 <input id="id" type="text" name="id" placeholder="ID"> <div id="id_check">아이디를 입력해주세요</div>
             </div>
