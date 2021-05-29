@@ -19,9 +19,3 @@
         <input type="submit">추가하기
     </form>
 </div>
-<script>
-    
-</script>
-<div>
-
-</div>
