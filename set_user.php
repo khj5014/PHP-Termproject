@@ -4,7 +4,9 @@
     <form  name ="create_user" action="create_user.php" method="POST" onsubmit="return check_userset();">
         <ul>
             <div>
-                <input id="id" type="text" name="id" placeholder="ID"> <div id="id_check">아이디를 입력해주세요</div>
+                <input id="id" type="text" name="id" placeholder="ID">
+                <input type="hidden" v>
+                <div id="id_check">아이디를 입력해주세요</div>
             </div>
             <div>
                 <input type="password" name="pw1" placeholder="PW">
@@ -18,4 +20,8 @@
         </ul>
         <input type="submit">추가하기
     </form>
+</div>
+
+<div>
+
 </div>
