@@ -103,7 +103,16 @@ $(function() {
                 self.parent().find("div").html(data);
 
             }
-
-        })
+        });
+    });
+    $('#write_report').on("click", function() {
+        $.ajax({
+            url: "write_report.php",
+            type: "post",
+            datatype: "html",
+            success: function(data) {
+                $('#status_target').html(data);
+            }
+        });
     });
 });

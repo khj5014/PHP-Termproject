@@ -27,6 +27,7 @@ $page_start = ($page - 1) * $list;
 $sql_home_sub1 = mq("select * from notice order by id desc limit $page_start,$list");
 
 ?>
+ <script type="text/javascript" src="./js/common.js"></script>
 <style>
     #home_main {
         background-color: #111;
