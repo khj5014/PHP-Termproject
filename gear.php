@@ -91,8 +91,8 @@ $max_result = 10;
         $result_sub2= mq($query_sub2);
         while($rows_sub2=mysqli_fetch_array($result_sub2)){
           echo '<tr><td>' . $rows_sub2['id'] .
-          '</td><td>' . $rows_sub2['title'] .
-          '</td><td>' . $rows_sub2['writer'] . '</td><tr>';
+          '</td><td><a href="view_content.php?id='.$rows_sub2['id'].'">'. $rows_sub2['title'] .
+          '</a></td><td>' . $rows_sub2['writer'] . '</td><tr>';
         }
       ?>
   </table>

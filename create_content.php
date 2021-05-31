@@ -1,4 +1,4 @@
-<!-- 글작성 컨텐츠입니다. -->
+<!-- 글작성 컨텐츠입니다. 공지 -->
 <?php
      include_once "db.php";
     $content= $_POST['content']; // 컨텐츠 추가 
