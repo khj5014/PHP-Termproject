@@ -4,5 +4,5 @@
     ?>
 <script>
     alert("로그아웃 하셧습니다.");
-    history.go(-1);
+    location.replace('index.php');
 </script>

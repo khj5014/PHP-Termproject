@@ -1,5 +1,6 @@
 <?php
 $id = $_GET['id'];
+var_dump($_GET);
 include "db.php";
 ?>
 
@@ -49,33 +50,24 @@ include "db.php";
             <?php
             $sql = "select title,content,writer from content where id = '$id'";
             $rows_view = mysqli_fetch_array(mq($sql));
-
-
             ?>
+
             <div id="status_target">
-                <div name="title">
-                    제목 : <?= $rows_view['title']; ?>
-                </div>
-                <div name="writer">
-                    작성자 : <?= $rows_view['writer'];?>
-                </div>
-                <div name="content">
-                    내용 : <?= $rows_view['content']; ?>
-                </div>
-                
+                <form action="create_report.php?mode=edit&&id=<?= $id ?>" method="post">
+                    <div name="title">
+                        <input type="text"  name ="title" value="<?= $rows_view['title']; ?>">
+                    </div>
+                    <div name="writer">
+                        작성자 : <?= $rows_view['writer']; ?>
+                    </div>
+                    <div name="content">
+                        <input type="text" name ="content" value="<?= $rows_view['content']; ?>">
+                    </div>
+                    <input type="submit">
+                </form>
+
                 <div name="menu">
-                    <?php 
-                    if($rows_view['writer']==$_SESSION['userid']||$_SESSION['u_rank']=='admin'){
-                        ?>
-                    <div name="edit">
-                        <button onclick="location.href='edit_content.php?id=<?=$id?>'">수정하기</button>
-                    </div>
-                    <div name="delete">
-                        <button onclick="location.href='create_report.php?mode=delete&&id=<?=$id?>'">삭제하기</button>
-                    </div>
-                        <?php
-                     }
-                     ?>
+
                 </div>
             </div>
     </section>

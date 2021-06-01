@@ -46,7 +46,7 @@ $sql_home_sub1 = mq("select * from notice order by id desc limit $page_start,$li
 </style>
 <div id="home_main">
     <table>
-        <thead>공지사항</thead>
+        <thead>최근 공지사항</thead>
         <td>
             <?php
             if (!isset($rows_main['content'])) {
