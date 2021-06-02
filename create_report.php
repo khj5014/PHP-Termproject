@@ -36,10 +36,8 @@ if ($_GET['mode']) {
     $title = $_POST['title'];
     $content = $_POST['content'];
     // constatus =디폴트값들어감
-    $sql = "insert into content(writer,title,content) values('$writer','$title','$content')";
+    $sql = "insert into content(writer,title,content,ride_Pid) values('$writer','$title','$content','$ride_Pid')";
     mq($sql);
-    $sql_rid ="update ride set ride.condition='broken' where ride_Pid='$ride_Pid'";
-    mq($sql_rid);
 }
 ?>
 <script>

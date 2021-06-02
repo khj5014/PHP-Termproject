@@ -57,6 +57,9 @@ include "db.php";
                     <div name="title">
                         제목 : <?= $rows_view['title'];?>
                     </div>
+                    <div name="ride_Pid">
+                        기구이름 :
+                    </div>
                     <div name="writer">
                         작성자 : <?= $rows_view['writer']; ?>
                     </div>

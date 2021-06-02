@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include "refresh_data.php";
 ?>
 <div id="top">
     <div id="top_con">
@@ -15,6 +16,6 @@
         </ul>
     </div>
     <div id="main_img">
-        <img src="img/15125.png" width="100%" alt="">
+        <img src="img/15125.png" width="100%" alt="" onclick="location.href='index.php';">
     </div>
 </div>

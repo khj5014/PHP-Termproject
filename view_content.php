@@ -47,7 +47,7 @@ include "db.php";
                 </ul>
             </div>
             <?php
-            $sql = "select title,content,writer from content where id = '$id'";
+            $sql = "select title,content,writer,ride_Pid,handling from content where id = '$id'";
             $rows_view = mysqli_fetch_array(mq($sql));
 
 
@@ -56,13 +56,19 @@ include "db.php";
                 <div name="title">
                     제목 : <?= $rows_view['title']; ?>
                 </div>
+                <div name ="rid_Pid">
+                    기구 : <?= $rows_view['ride_Pid'];?>
+                </div>
                 <div name="writer">
                     작성자 : <?= $rows_view['writer']; ?>
                 </div>
                 <div name="content">
                     내용 : <?= $rows_view['content']; ?>
                 </div>
-
+                <?php
+                    if($rows_view['handling'])
+                    echo "<div name='handling'>"."처리사항 :".$rows_view['handling']."</div>";
+                ?>
                 <div name="menu">
                     <?php
                     if ($rows_view['writer'] == $_SESSION['userid'] || $_SESSION['u_rank'] == 'admin') {
