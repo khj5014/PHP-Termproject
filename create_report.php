@@ -29,8 +29,8 @@ if ($_GET['mode']) {
         </script>
         <?php
         return;
-        
     }
+    
 } else {
     $writer = $_SESSION['userid'];
     $title = $_POST['title'];
