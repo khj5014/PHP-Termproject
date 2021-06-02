@@ -102,14 +102,16 @@ $max_result = 10;
       <th>id</th>
       <th>제목</th>
       <th>작성자</th>
+      <th>상태</th>
     </thead>
     <?php
-    $query_sub2 = "select id,title,writer from content";
+    $query_sub2 = "select id,title,writer,con_status from content";
     $result_sub2 = mq($query_sub2);
     while ($rows_sub2 = mysqli_fetch_array($result_sub2)) {
       echo '<tr><td>' . $rows_sub2['id'] .
         '</td><td><a href="view_content.php?id=' . $rows_sub2['id'] . '">' . $rows_sub2['title'] .
-        '</a></td><td>' . $rows_sub2['writer'] . '</td><tr>';
+        '</a></td><td>' . $rows_sub2['writer'].'</td><td>'.
+                      $rows_sub2['con_status'].'</td><tr>';
     }
     ?>
   </table>

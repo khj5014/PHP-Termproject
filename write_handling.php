@@ -1,5 +1,6 @@
 <?php
 $id = $_GET['id'];
+var_dump($_GET);
 include "db.php";
 ?>
 
@@ -49,37 +50,27 @@ include "db.php";
             <?php
             $sql = "select title,content,writer from content where id = '$id'";
             $rows_view = mysqli_fetch_array(mq($sql));
-
-
             ?>
+
             <div id="status_target">
-                <div name="title">
-                    제목 : <?= $rows_view['title']; ?>
-                </div>
-                <div name="writer">
-                    작성자 : <?= $rows_view['writer']; ?>
-                </div>
-                <div name="content">
-                    내용 : <?= $rows_view['content']; ?>
-                </div>
+                <form action="create_handling.php?id=<?= $id ?>" method="post">
+                    <div name="title">
+                        제목 : <?= $rows_view['title'];?>
+                    </div>
+                    <div name="writer">
+                        작성자 : <?= $rows_view['writer']; ?>
+                    </div>
+                    <div name="content">
+                        내용 : <?= $rows_view['content'];?>
+                    </div>
+                    <div name="handling">
+                        <input type="text" name ="handling" value="">
+                    </div>
+                    <input type="submit">
+                </form>
 
                 <div name="menu">
-                    <?php
-                    if ($rows_view['writer'] == $_SESSION['userid'] || $_SESSION['u_rank'] == 'admin') {
-                    ?>
-                        <div name="edit">
-                            <button onclick="location.href='edit_content.php?id=<?= $id ?>'">수정하기</button>
-                        </div>
-                        <div name="delete">
-                            <button onclick="location.href='create_report.php?mode=delete&&id=<?= $id ?>'">삭제하기</button>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                    <div name="handling">
-                        <button onclick="location.href='write_handling.php?id=<?= $id ?>'">처리사항작성하기</button>
-                    </div>
-                
+
                 </div>
             </div>
     </section>
