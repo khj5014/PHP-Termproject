@@ -57,10 +57,9 @@ $search = $_GET['search_target'];
                     </thead>
                     <?php
                     if ($option == 'content') {
-                        $search="%".$search."%";
+                        $search = "%" . $search . "%";
                         $query_search = "select * from content where $option like '$search'";
-                    }
-                     else {
+                    } else {
                         $query_search = "select * from content where $option = '$search'";
                     }
 
@@ -74,6 +73,18 @@ $search = $_GET['search_target'];
                     }
                     ?>
                 </table>
+                <div name="search_bar">
+                    <form action="view_search.php" method="GET">
+                        <div>
+                            <select name="option">
+                                <option value="writer">작성자</option>
+                                <option value="content">내용</option>
+                            </select>
+                            <input type="text" name="search_target">
+                            <input type="submit">
+                        </div>
+                    </form>
+                </div>
             </div>
     </section>
     <footer>
