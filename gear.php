@@ -75,24 +75,41 @@ $max_result = 10;
 <div id="gear_sub1">
   <!-- 처리완료 -->
   <div id="gear_sub1_title">
-  처리완료
+    처리완료
   </div>
   <table>
-    <?php
-    // 테이블 php 작성할것
-    ?>
     <thead>
       <th>id</th>
       <th>제목</th>
       <th>작성자</th>
     </thead>
+    <?php
+    $query_sub1 = "select id,title,writer from content where con_status='solved'";
+    $result_sub1 = mq($query_sub1);
+    while ($rows_sub1 = mysqli_fetch_array($result_sub1)) {
+      echo '<tr><td>' . $rows_sub1['id'] .
+        '</td><td><a href="view_content.php?id=' . $rows_sub1['id'] . '">' . $rows_sub1['title'] .
+        '</a></td><td>' . $rows_sub1['writer'] . '</td><tr>';
+    }
+    ?>
   </table>
-
+  <div name="search_bar">
+    <form action="view_search.php" method="GET">
+      <div>
+        <select name="option">
+          <option value="writer">작성자</option>
+          <option value="content">내용</option>
+        </select>
+        <input type="text" name="search_target">
+        <input type="submit">
+      </div>
+    </form>
+  </div>
 </div>
 <div id="gear_sub2">
-<div id="gear_sub2_title">
-      고장상황
-</div>
+  <div id="gear_sub2_title">
+    고장상황
+  </div>
   <!-- 고장상황 -->
   <table>
     <?php
@@ -110,8 +127,8 @@ $max_result = 10;
     while ($rows_sub2 = mysqli_fetch_array($result_sub2)) {
       echo '<tr><td>' . $rows_sub2['id'] .
         '</td><td><a href="view_content.php?id=' . $rows_sub2['id'] . '">' . $rows_sub2['title'] .
-        '</a></td><td>' . $rows_sub2['writer'].'</td><td>'.
-                      $rows_sub2['con_status'].'</td><tr>';
+        '</a></td><td>' . $rows_sub2['writer'] . '</td><td>' .
+        $rows_sub2['con_status'] . '</td><tr>';
     }
     ?>
   </table>

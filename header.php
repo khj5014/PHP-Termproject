@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include "refresh_data.php";
+    include_once "refresh_data.php";
 ?>
 <div id="top">
     <div id="top_con">
